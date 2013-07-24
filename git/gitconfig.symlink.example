@@ -1,0 +1,23 @@
+[user]
+	email = {{YOUR_EMAIL}}
+	name = {{YOUR_NAME}}
+[push]
+  default = simple
+[color]
+  status = auto
+  diff = auto
+  interactive = auto
+  ui = true
+[hub]
+  protocol = https
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[apply]
+  whitespace = nowarn
+[mergetool]
+  keepBackup = false
+[difftool]
+  prompt = false
+[help]
+  autocorrect = 1
