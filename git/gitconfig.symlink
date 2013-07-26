@@ -1,0 +1,18 @@
+[user]
+	email = broderson@gmail.com
+	name = Dayne Broderson
+[push]
+  default = simple
+[color]
+  status = auto
+  diff = auto
+  interactive = auto
+  ui = true
+[github]
+  user = dayne
+[alias]
+  praise = blame
+  hist = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
