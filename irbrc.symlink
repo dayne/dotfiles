@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+begin 
+  # load wirble
+  require 'wirble'
+
+  # start wirble (with color!)
+  Wirble.init
+  Wirble.colorize
+rescue LoadError => err
+  warn "Couldn't load Wirble: #{err} # gem install wirble"
+end
+
+begin 
+  # load wirb
+  require 'wirb'
+
+  Wirb.start
+rescue LoadError => err
+  warn "Coudn't load wirb: #{err} # gem install wirb"
+end
+
+puts "wirble & wirb loaded"
