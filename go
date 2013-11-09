@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 
-def sym_link_it(file,target)
+def sym_link_it(rel_file,rel_target)
+  # full path to file
+  file = File.join( ENV['HOME'], '.dotfiles', rel_file )
+  target = File.join( ENV['HOME'], rel_target )
 	backup = target+'.dib' # d init backup
 	if File.symlink?(target) 
 		puts "skipping #{file} as the target already a symlink: #{target}"
@@ -19,5 +22,9 @@ def sym_link_it(file,target)
 	File.symlink(file,target)
 end
 
-sym_link_it( File.join( Dir.pwd,'vim/vimrc.symlink' ), File.join( ENV['HOME'], '.vimrc' ) )
+
+sym_link_it( 'vim/vimrc.symlink' , '.vimrc' )
+sym_link_it( 'irbrc.symlink' ,  '.irbrc'  )
+
+system("bundle")
 
