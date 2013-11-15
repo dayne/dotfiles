@@ -1,0 +1,4 @@
+set-option -g prefix C-A
+setw -g aggressive-resize on
+set -g base-index 1
+bind-key a send-prefix
